@@ -1,5 +1,8 @@
-# Nustian USA — Annual Gala Event Page
+# nustianusa_event
 
-Event page for the Nustian USA Silicon Valley Annual Gala — Saturday, November 7, 2026, 6–11 PM at the Computer History Museum Grand Hall, Mountain View.
+Nustian USA Silicon Valley Annual Gala — single Vercel project site.
 
-Single self-contained `index.html` (exported from the Muse web artifact `event-page`). Deploy as a static site (e.g. Vercel).
+- `/` — Annual Gala event page (Nov 7, 2026)
+- `/sponsorship/` — sponsorship proposal site (mirrored from `nustianusa_sponsorship`; the standalone deployment at nustianusa-sponsorship.vercel.app is kept live too)
+
+Pushes to `main` auto-deploy to https://nustianusa-event.vercel.app.
