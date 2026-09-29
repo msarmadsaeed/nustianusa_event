@@ -495,6 +495,61 @@
     }
     .venue-date span { display: block; margin-top: 12px; font-weight: 600; font-size: .85rem; letter-spacing: .3em; text-indent: .3em; text-transform: uppercase; color: var(--ivory-dim); }
 
+    .countdown {
+      grid-column: 1 / -1;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .countdown-label {
+      display: block;
+      margin-bottom: 24px;
+      color: var(--star-gold);
+      font-weight: 600;
+      font-size: .85rem;
+      letter-spacing: .38em;
+      text-indent: .38em;
+      text-transform: uppercase;
+    }
+    .countdown-row {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+    }
+    .cd-unit {
+      min-width: 120px;
+      padding: 22px 12px 18px;
+      background: rgba(96, 27, 27, .55);
+      border: 1px solid var(--frame-gold-dim);
+      box-shadow: var(--shadow);
+    }
+    .cd-unit strong {
+      display: block;
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--ivory);
+      font-variant-numeric: tabular-nums;
+    }
+    .cd-unit span {
+      display: block;
+      margin-top: 12px;
+      font-weight: 600;
+      font-size: .72rem;
+      letter-spacing: .28em;
+      text-indent: .28em;
+      text-transform: uppercase;
+      color: var(--ivory-dim);
+    }
+    .countdown-note {
+      display: block;
+      margin-top: 24px;
+      color: var(--ivory-dim);
+      font-size: 1.05rem;
+      font-style: italic;
+    }
+
     .contacts {
       width: min(1180px, calc(100% - 56px));
       margin: 0 auto;
@@ -603,6 +658,10 @@
       .venue-card { padding: 40px 30px 42px; }
       .venue-date { width: min(300px, 84%); }
       .venue-date strong { font-size: 4.6rem; }
+      .countdown-row { gap: 10px; }
+      .countdown-label { margin-bottom: 18px; }
+      .cd-unit { min-width: 0; flex: 1; padding: 18px 6px 16px; }
+      .cd-unit strong { font-size: 2.2rem; }
       .contacts { padding: 82px 0 92px; }
       .contact-list a { gap: 10px; padding: 22px 2px; font-size: 1.05rem; }
       .contact-list a::after { content: "Email"; }
@@ -687,6 +746,16 @@
         <div class="venue-date" aria-label="Saturday, November 7, 2026">
           <div><strong>07</strong><span>November 2026</span></div>
         </div>
+        <div class="countdown" role="timer" aria-label="Countdown to the gala">
+          <span class="countdown-label">Doors open in</span>
+          <div class="countdown-row">
+            <div class="cd-unit"><strong id="cd-days">—</strong><span>Days</span></div>
+            <div class="cd-unit"><strong id="cd-hours">—</strong><span>Hours</span></div>
+            <div class="cd-unit"><strong id="cd-mins">—</strong><span>Minutes</span></div>
+            <div class="cd-unit"><strong id="cd-secs">—</strong><span>Seconds</span></div>
+          </div>
+          <span class="countdown-note">Saturday, November 7, 2026 · 6:00 PM</span>
+        </div>
       </div>
     </section>
 
@@ -711,5 +780,37 @@
       <span>Silicon Valley Annual Gala · November 7, 2026</span>
     </div>
   </footer>
+
+  <script>
+  (function () {
+    // Gala doors: Saturday, November 7, 2026, 6:00 PM Pacific (PST, UTC-8)
+    var target = new Date("2026-11-07T18:00:00-08:00").getTime();
+    var d = document.getElementById("cd-days"),
+        h = document.getElementById("cd-hours"),
+        m = document.getElementById("cd-mins"),
+        s = document.getElementById("cd-secs");
+    if (!d || !h || !m || !s) return;
+    function pad(n) { return (n < 10 ? "0" : "") + n; }
+    function tick() {
+      var diff = target - Date.now();
+      if (diff <= 0) {
+        var row = document.querySelector(".countdown-row");
+        var label = document.querySelector(".countdown-label");
+        var note = document.querySelector(".countdown-note");
+        if (row) row.style.display = "none";
+        if (label) label.textContent = "Tonight\u2019s the night";
+        if (note) note.textContent = "See you at the Grand Hall, Computer History Museum \u2014 doors open 6:00 PM.";
+        clearInterval(timer);
+        return;
+      }
+      d.textContent = Math.floor(diff / 864e5);
+      h.textContent = pad(Math.floor(diff / 36e5) % 24);
+      m.textContent = pad(Math.floor(diff / 6e4) % 60);
+      s.textContent = pad(Math.floor(diff / 1e3) % 60);
+    }
+    var timer = setInterval(tick, 1000);
+    tick();
+  })();
+  </script>
 </body>
 </html>
