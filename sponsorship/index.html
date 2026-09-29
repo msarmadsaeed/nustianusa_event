@@ -12,16 +12,16 @@
   <style>
     :root {
       color-scheme: light dark;
-      --paper:#f5f3ee; --ink:#10201b; --muted:#53635d; --surface:#fffdf8;
-      --surface-2:#e7ece6; --line:#c8d2cb; --forest:#0e604b; --forest-deep:#073b30;
-      --mint:#c3e7d5; --red:#c94834; --gold:#d79a2d; --white:#fffdf8;
-      --shadow:0 18px 54px rgba(25,41,35,.10);
+      --paper:#f7f1e3; --ink:#2c1414; --muted:#7a6a5c; --surface:#fffdf8;
+      --surface-2:#efe4cc; --line:#d8c8a4; --forest:#7A2429; --forest-deep:#601B1B;
+      --mint:#eadfc3; --red:#893439; --gold:#C6AA79; --white:#fffdf8;
+      --shadow:0 18px 54px rgba(96,27,27,.10);
     }
     @media (prefers-color-scheme:dark) {
       :root {
-        --paper:#0c1512; --ink:#edf5f0; --muted:#abbab3; --surface:#12201b;
-        --surface-2:#1a2b25; --line:#344940; --forest:#74cfaa; --forest-deep:#b8e4cd;
-        --mint:#173d32; --red:#ef826f; --gold:#e9ba61; --white:#f7f3e9;
+        --paper:#1f0c0c; --ink:#EBE5C5; --muted:#a68f66; --surface:#2e1214;
+        --surface-2:#3a1618; --line:#5c4232; --forest:#C6AA79; --forest-deep:#EBE5C5;
+        --mint:#402021; --red:#dd8a70; --gold:#C6AA79; --white:#f7f3e9;
         --shadow:0 18px 54px rgba(0,0,0,.28);
       }
     }
@@ -101,7 +101,7 @@
     .comparison-table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);font-size:.78rem;table-layout:fixed}.comparison-table th,.comparison-table td{padding:12px 9px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);vertical-align:middle;text-align:center}.comparison-table th:first-child,.comparison-table td:first-child{width:29%;text-align:left;font-weight:600}.comparison-table thead th{background:var(--forest-deep);color:var(--white);font-size:.8rem}.comparison-table thead span{display:block;margin-top:3px;font:500 .7rem "IBM Plex Mono",monospace;opacity:.74}.comparison-table tbody tr:last-child td{border-bottom:0}.yes{color:var(--forest);font-weight:700;font-size:1rem}.dash{color:var(--muted)}
     .mobile-comparison{display:none}.tier-card{padding:22px;background:var(--surface);border:1px solid var(--line)}.tier-card+.tier-card{margin-top:12px}.tier-card header{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding-bottom:12px;border-bottom:1px solid var(--line)}.tier-card h4{margin:0;font:600 1.4rem "Newsreader",serif}.tier-card header span{font:500 .78rem "IBM Plex Mono",monospace;color:var(--forest)}.tier-card ul{margin:14px 0 0;padding:0;list-style:none}.tier-card li{padding:7px 0 7px 18px;position:relative;color:var(--muted);font-size:.88rem}.tier-card li::before{content:"+";position:absolute;left:0;color:var(--red);font-weight:700}
 
-    .closing{padding:clamp(36px,7vw,78px);background:var(--forest-deep);color:var(--white);position:relative;overflow:hidden}.closing::after{content:"";position:absolute;width:250px;height:250px;border:48px solid var(--gold);border-radius:50%;right:-85px;top:-95px}.closing>.kicker{display:block;margin-bottom:22px;color:var(--gold);position:relative;z-index:1}.closing h2{max-width:800px;margin:0 0 18px;font:600 clamp(2.7rem,6vw,5.8rem)/.95 "Newsreader",serif;letter-spacing:-.05em;position:relative;z-index:1}.closing p{max-width:670px;margin:0;font-size:1.05rem;opacity:.82;position:relative;z-index:1}.closing a{display:inline-flex;margin-top:20px;min-height:44px;padding:0 17px;align-items:center;text-decoration:none;background:var(--white);color:#0d2c24;font-weight:700;position:relative;z-index:1}.fine-print{margin-top:26px;padding-top:18px;border-top:1px solid color-mix(in srgb,var(--white) 28%,transparent);max-width:880px;font-size:.72rem;opacity:.7;position:relative;z-index:1}
+    .closing{padding:clamp(36px,7vw,78px);background:var(--forest-deep);color:var(--white);position:relative;overflow:hidden}.closing::after{content:"";position:absolute;width:250px;height:250px;border:48px solid var(--gold);border-radius:50%;right:-85px;top:-95px}.closing>.kicker{display:block;margin-bottom:22px;color:var(--gold);position:relative;z-index:1}.closing h2{max-width:800px;margin:0 0 18px;font:600 clamp(2.7rem,6vw,5.8rem)/.95 "Newsreader",serif;letter-spacing:-.05em;position:relative;z-index:1}.closing p{max-width:670px;margin:0;font-size:1.05rem;opacity:.82;position:relative;z-index:1}.closing a{display:inline-flex;margin-top:20px;min-height:44px;padding:0 17px;align-items:center;text-decoration:none;background:var(--white);color:#601B1B;font-weight:700;position:relative;z-index:1}.fine-print{margin-top:26px;padding-top:18px;border-top:1px solid color-mix(in srgb,var(--white) 28%,transparent);max-width:880px;font-size:.72rem;opacity:.7;position:relative;z-index:1}
     footer{padding:24px 0 38px;border-top:1px solid var(--line);color:var(--muted);font-size:.74rem}footer .shell{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 
     @media(max-width:900px){
@@ -123,9 +123,9 @@
     }
     @media print{.tab-wrap{display:none}.panel{display:block!important;page-break-before:auto}body{background:white;color:#111}.mobile-comparison{display:none}.comparison-table{display:table}}
     @media (prefers-color-scheme:dark){
-      /* keep deep-green brand blocks dark so the light text on them stays readable */
-      .pdf-btn,.facts,.age-ring,.package-tab.active,.comparison-table thead th,.closing{background:#073b30}
-      .pdf-btn:hover{background:#0e604b}
+      /* keep deep-claret brand blocks dark so the light text on them stays readable */
+      .pdf-btn,.facts,.age-ring,.package-tab.active,.comparison-table thead th,.closing{background:#601B1B}
+      .pdf-btn:hover{background:#7A2429}
     }
   </style>
 </head>
