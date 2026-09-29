@@ -110,6 +110,25 @@
       padding: 112px 0 100px;
       text-align: center;
     }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    .hero-poster {
+      display: block;
+      width: min(480px, 80vw);
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid var(--frame-gold);
+      box-shadow: 0 30px 80px rgba(20, 5, 5, .55);
+    }
+    @media (min-width: 900px) {
+      .hero-poster { width: min(540px, 42vw); }
+    }
     .date-mark {
       display: inline-block;
       margin-bottom: 34px;
@@ -591,15 +610,8 @@
       <div class="hero-rays" aria-hidden="true"></div>
       <div class="hero-stars" aria-hidden="true"><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i></div>
       <div class="hero-inner">
-        <div class="date-mark" aria-label="November 7">NOV 07</div>
-        <p class="event-kicker">Nustian USA · 2026</p>
-        <h1 id="event-title"><span class="h1-caps">Silicon Valley</span> <span class="h1-script">Annual</span> <span class="h1-gala">Gala</span></h1>
-        <div class="hero-medallion" aria-hidden="true">
-          <div>
-            <strong>07</strong>
-            <span>November 2026</span>
-          </div>
-        </div>
+        <h1 id="event-title" class="visually-hidden">Silicon Valley Annual Gala 2026 — Nustian USA</h1>
+        <img class="hero-poster" src="poster-hero.jpg" width="1200" height="1552" fetchpriority="high" alt="Nustian USA presents the Silicon Valley Annual Gala 2026 — dinner and live concert, November 7, 2026, Mountain View, CA">
         <p class="hero-deck">An evening of conversation, dinner, community, and live music in the heart of Silicon Valley.</p>
         <p class="hero-venue">
           <strong>Computer History Museum</strong>
