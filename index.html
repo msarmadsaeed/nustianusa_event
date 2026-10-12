@@ -257,7 +257,7 @@
       text-wrap: balance;
       line-height: 1.9;
     }
-    .hero-actions { margin-top: 38px; }
+    .hero-actions { margin-top: 38px; display: flex; gap: 18px; flex-wrap: wrap; }
     .sponsor-button {
       display: inline-flex;
       align-items: center;
@@ -306,6 +306,7 @@
       align-items: center;
     }
     .event-bar p { margin: 0; padding: 0 24px; border-right: 1px solid var(--frame-gold-faint); }
+    .event-bar a.event-link, .ticket-callout a { color: var(--star-gold); }
     .event-bar p:first-child { padding-left: 0; }
     .event-bar p:last-child { padding-right: 0; border-right: 0; text-align: right; }
     .event-bar strong { display: block; font-weight: 500; font-size: 1.28rem; letter-spacing: .03em; }
@@ -647,13 +648,14 @@
       <div class="hero-stars" aria-hidden="true"><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i></div>
       <div class="hero-inner">
         <h1 id="event-title" class="visually-hidden">Silicon Valley Annual Gala 2026 — Nustian USA</h1>
-        <img class="hero-poster" src="poster-hero.jpg" width="1200" height="1552" fetchpriority="high" alt="Nustian USA presents the Silicon Valley Annual Gala 2026 — dinner and live concert, November 7, 2026, Mountain View, CA">
+        <img class="hero-poster" src="poster-hero.jpg" width="1200" height="1552" fetchpriority="high" alt="Nustian USA presents the Silicon Valley Annual Gala 2026 — live performance by Fareed Ayaz & Abu Muhammad Qawwals, November 7, 2026, Computer History Museum, Mountain View, CA">
         <p class="hero-deck">An evening of conversation, dinner, community, and live music in the heart of Silicon Valley.</p>
         <p class="hero-venue">
           <strong>Computer History Museum</strong>
           <span>Grand Hall · Mountain View, California</span>
         </p>
         <div class="hero-actions">
+          <a class="sponsor-button" href="https://www.zeffy.com/en-US/ticketing/silicon-valley-annual-gala--2026">Get tickets</a>
           <a class="sponsor-button" href="/sponsorship/">Explore sponsorship</a>
         </div>
       </div>
@@ -663,7 +665,7 @@
       <div class="event-bar-inner">
         <p><strong>Saturday, November 7, 2026</strong><span>Save the evening</span></p>
         <p><strong>6:00–11:00 PM</strong><span>Five hours together</span></p>
-        <p><strong>Tickets coming soon</strong><span>Release details to follow</span></p>
+        <p><strong><a class="event-link" href="https://www.zeffy.com/en-US/ticketing/silicon-valley-annual-gala--2026">Get tickets</a></strong><span>On sale now</span></p>
       </div>
     </section>
 
@@ -729,7 +731,7 @@
         <p class="section-label">Stay in the loop</p>
         <h2 id="contact-heading">Questions?</h2>
         <p>Reach the event team for program, ticket, or attendance questions.</p>
-        <div class="ticket-callout">Tickets are coming soon.</div>
+        <div class="ticket-callout">Tickets are on sale now — <a href="https://www.zeffy.com/en-US/ticketing/silicon-valley-annual-gala--2026">get yours here</a>.</div>
       </div>
       <div class="contact-list">
         <a href="mailto:sarmad.saeed@nustianusa.org">sarmad.saeed@nustianusa.org</a>
