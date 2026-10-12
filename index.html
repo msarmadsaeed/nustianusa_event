@@ -237,6 +237,7 @@
     .hero-venue .hero-artist {
       display: block;
       margin-bottom: 16px;
+      max-width: none;
       font-family: var(--serif);
       font-weight: 600;
       font-size: clamp(1.9rem, 5vw, 2.9rem);
@@ -316,33 +317,6 @@
     }
     .event-bar p { margin: 0; padding: 0 24px; border-right: 1px solid var(--frame-gold-faint); }
     .event-bar a.event-link, .ticket-callout a { color: var(--star-gold); }
-    .artist-spot {
-      text-align: center;
-      padding: 96px 24px;
-      background: radial-gradient(circle at 50% 30%, var(--velvet-light), var(--velvet-shadow) 75%);
-      border-top: 1px solid var(--frame-gold-dim);
-      border-bottom: 1px solid var(--frame-gold-dim);
-    }
-    .artist-spot .section-label { justify-content: center; }
-    .artist-spot .section-label::before { display: none; }
-    .artist-spot h2 {
-      margin: 0;
-      font-family: var(--serif);
-      font-weight: 600;
-      font-size: clamp(3rem, 9vw, 7.5rem);
-      line-height: 1.02;
-      letter-spacing: -0.02em;
-      color: var(--ivory);
-    }
-    .artist-spot h2 .amp { color: var(--star-gold); font-style: italic; }
-    .artist-sub {
-      margin: 22px auto 34px;
-      max-width: 620px;
-      color: var(--ivory-dim);
-      font-size: 1.25rem;
-      font-style: italic;
-    }
-    .artist-spot .sponsor-button { margin: 0 auto; }
     .event-bar p:first-child { padding-left: 0; }
     .event-bar p:last-child { padding-right: 0; border-right: 0; text-align: right; }
     .event-bar strong { display: block; font-weight: 500; font-size: 1.28rem; letter-spacing: .03em; }
@@ -704,13 +678,6 @@
         <p><strong>6:00–11:00 PM</strong><span>Five hours together</span></p>
         <p><strong><a class="event-link" href="https://www.zeffy.com/en-US/ticketing/silicon-valley-annual-gala--2026">Get tickets</a></strong><span>On sale now</span></p>
       </div>
-    </section>
-
-    <section class="artist-spot" aria-labelledby="artist-heading">
-      <p class="section-label">Live qawwali · 9:00–11:00 PM</p>
-      <h2 id="artist-heading">Fareed Ayaz <span class="amp">&amp;</span><br>Abu Muhammad</h2>
-      <p class="artist-sub">The qawwal power house — closing the night at the Silicon Valley Annual Gala.</p>
-      <a class="sponsor-button" href="https://www.zeffy.com/en-US/ticketing/silicon-valley-annual-gala--2026">Get tickets</a>
     </section>
 
     <section class="section" aria-labelledby="program-heading">
