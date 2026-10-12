@@ -234,6 +234,15 @@
       color: var(--ivory-dim);
     }
     .hero-venue { margin: 36px 0 0; }
+    .hero-venue .hero-artist {
+      display: block;
+      margin-bottom: 16px;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(1.9rem, 5vw, 2.9rem);
+      letter-spacing: .03em;
+      color: var(--ivory);
+    }
     .hero-venue strong {
       display: block;
       font-family: var(--serif);
@@ -676,8 +685,9 @@
       <div class="hero-inner">
         <h1 id="event-title" class="visually-hidden">Silicon Valley Annual Gala 2026 — Nustian USA</h1>
         <img class="hero-poster" src="poster-hero.jpg" width="1200" height="1552" fetchpriority="high" alt="Nustian USA presents the Silicon Valley Annual Gala 2026 — live performance by Fareed Ayaz & Abu Muhammad Qawwals, November 7, 2026, Computer History Museum, Mountain View, CA">
-        <p class="hero-deck">An evening of conversation, dinner, community, and live qawwali from the qawwal power house, Fareed Ayaz and Abu Muhammad.</p>
+        <p class="hero-deck">An evening of conversation, dinner, community, and live qawwali from the qawwal power house.</p>
         <p class="hero-venue">
+          <span class="hero-artist">Fareed Ayaz &amp; Abu Muhammad</span>
           <strong>Computer History Museum</strong>
           <span>Grand Hall · Mountain View, California</span>
         </p>
